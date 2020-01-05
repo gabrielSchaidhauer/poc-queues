@@ -13,23 +13,18 @@ export default class KafkaListener {
         this.consumer.connect({
             'group.id': 'kafka',
             'metadata.broker.list': 'localhost:9092'
-        }, (err, data) => {
-            console.log('err',err);
-            console.log('data', data);
         });
         this.consumer.on('ready', () => this.onReady());
+        this.consumer.on('data', this.onData)
     }
 
     private onReady() {
-        console.log('Ready');
+        console.log('ready listener');
         this.consumer.subscribe(['test']);
-        console.log('teste');
         this.consumer.consume();
-        console.log('consumindo');
     }
 
-    /*private onData(data: any) {
-        console.log('listening');
-        console.log(data);
-    }*/
+    private onData(data: any) { 
+        console.log(data.value.toString());
+    }
 }

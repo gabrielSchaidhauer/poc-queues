@@ -40,4 +40,36 @@ Call a POST to ```http://localhost:3000/nsq``` with the payload:
 
 then you should read your message on the server logs.
 
+## KAFKA
+
+This POC doesn`t run inside docker, I was not able to run it on docker however I created a script that should handle it all. Follow these steps and everything should work
+
+Run the Kafka script
+
+```
+$ npm run kafka
+```
+
+Then create the topic (it may tell it already exists, just ignore)
+
+```
+$ npm run create-topic
+```
+
+then run the applicaiton
+
+```
+$ npm run dev
+```
+
+At last call a POST to ```http://localhost:3000/kafka``` with the payload:
+
+```JSON
+{
+	"message": ""
+}
+```
+
+then you should read your message on the server logs.
+
 Have a nice day! :)
