@@ -27,7 +27,7 @@ $ npm install
 And then you can run the development server:
 
 ```
-$ npm run dev
+$ npm run dev -- --nsq
 ```
 
 Call a POST to ```http://localhost:3000/nsq``` with the payload:
@@ -59,7 +59,7 @@ $ npm run create-topic
 then run the applicaiton
 
 ```
-$ npm run dev
+$ npm run dev -- --kafka
 ```
 
 At last call a POST to ```http://localhost:3000/kafka``` with the payload:
@@ -71,5 +71,27 @@ At last call a POST to ```http://localhost:3000/kafka``` with the payload:
 ```
 
 then you should read your message on the server logs.
+
+## ZeroMQ
+
+Run install
+
+```
+$ npm install
+```
+
+then run the applicaiton
+
+```
+$ npm run dev -- --zero
+```
+
+At last call a POST to ```http://localhost:3000/zero``` with the payload:
+
+```JSON
+{
+	"message": ""
+}
+```
 
 Have a nice day! :)

@@ -4,7 +4,6 @@ export default class KafkaProducer {
 
 
     constructor() {
-        console.log('consrtucted')
         this.producer = new Producer({
             'metadata.broker.list': 'localhost:9092',
             'dr_cb': true

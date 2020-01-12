@@ -19,7 +19,6 @@ export default class KafkaListener {
     }
 
     private onReady() {
-        console.log('ready listener');
         this.consumer.subscribe(['test']);
         this.consumer.consume();
     }
