@@ -4,7 +4,7 @@ export default class ZeroListener {
     private subscriber: Subscriber
     constructor() {
         this.subscriber = new Subscriber;
-        this.subscriber.connect("tcp://127.0.0.1:3000");
+        this.subscriber.connect("tcp://127.0.0.1:3001");
         this.subscriber.subscribe("kitty cats");
     }
 

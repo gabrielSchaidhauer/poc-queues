@@ -4,7 +4,7 @@ export default class ZeroProducer {
     private publisher: Publisher;
     constructor() {
         this.publisher = new Publisher;
-        this.publisher.bind('tcp://127.0.0.1:3000');
+        this.publisher.bind('tcp://127.0.0.1:3001');
     }
 
     async sendMessage(message: string) {
