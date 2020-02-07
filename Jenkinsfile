@@ -18,7 +18,7 @@ pipeline {
       stage('Run') {
          steps {
             sh '''
-            docker run -p 3000:3000 queues
+            nohup docker run -p 3000:3000 queues
             '''
          }
       }
