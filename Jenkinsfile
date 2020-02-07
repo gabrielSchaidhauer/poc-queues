@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('Fetch') {
          steps {
-            git 'https://github.com/jglick/simple-maven-project-with-tests.git'         
+            git 'https://github.com/gabrielSchaidhauer/poc-queues.git'         
          }
       }
 
